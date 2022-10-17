@@ -44,7 +44,6 @@
       </ul>
 
       <ul id="nav-mobile" class="sidenav onti white-text" style="transform: translateX(-105%);">
-        <li><a class="white-text" href="index.html">Home</a></li>
         <li><a class="white-text" href="guia.html">Guía Turística</a></li>
         <li><a class="white-text" href="#galeria">Galería</a></li>
         <li><a class="white-text" href="#informacion">Información</a></li>
@@ -161,9 +160,9 @@
             <br>
             <div id="info3" class="cont-padding center ">
               <script id="info3Template" type="text/x-handlebars-template">
-                <marquee behavior="scroll">{{cells.rioceleste}}</marquee>
-         <div class="bienvenida">{{cells.actividades}}</div>
-         <div class="bienvenida">{{cells.otras}}</div>
+                <marquee behavior="scroll">{{{cells.rioceleste}}}</marquee>
+         <div class="bienvenida">{{{cells.actividades}}}</div>
+         <div class="bienvenida">{{{cells.otras}}}</div>
        </script>
             </div>
             <div class="container cont-padding">
@@ -200,17 +199,17 @@
                 <li>
                     <div class="collapsible-header "><h6 class="" translate="{{cells.traducir}}">{{cells.titulo}}</h6></div>
       <div id="{{cells.id}}" class="collapsible-body infobody">
-       <p class="contenidoCard" style="text-size:16px;">{{cells.parrafo1}}
+       <p class="contenidoCard" style="text-size:16px;">{{{cells.parrafo1}}}
         </p>
         <div class="center"><img loading="lazy" class="imgInfo" src="{{cells.imgURL1}}"></div>
-       <p class="contenidoCard">{{cells.parrafo2}}</p>
+       <p class="contenidoCard">{{{cells.parrafo2}}}</p>
          <div class="center"><a data-fancybox href="{{cells.imgURL2}}"><img class=" imgInfo" loading="lazy" src="{{cells.imgURL2}}"></a></div>
-       <p class="contenidoCard">{{cells.parrafo3}}</p>
+       <p class="contenidoCard">{{{cells.parrafo3}}}</p>
          <div class="center"><a data-fancybox href="{{cells.imgURL3}}"><img class="imgInfo" loading="lazy" src="{{cells.imgURL3}}"></a></div>
-       <p class="contenidoCard">{{cells.parrafo4}}</p>
-      <p class="contenidoCard">{{cells.parrafo5}}</p>
-       <p class="contenidoCard">{{cells.parrafo6}}</p>
-       <p class="contenidoCard">{{cells.parrafo7}}</p>
+       <p class="contenidoCard">{{{cells.parrafo4}}}</p>
+      <p class="contenidoCard">{{{cells.parrafo5}}}</p>
+       <p class="contenidoCard">{{{cells.parrafo6}}}</p>
+       <p class="contenidoCard">{{{cells.parrafo7}}}</p>
       </div>
                     </li>
                   </script>
@@ -391,10 +390,7 @@ function topFunction() {
 }
   </script>
   
-  <script type="text/javascript">
-  d = new Date();
-  document.getElementById("year").innerHTML = d.getFullYear();
-</script>
+
 
 </body>
 

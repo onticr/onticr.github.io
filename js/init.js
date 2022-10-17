@@ -8,6 +8,11 @@
  })(jQuery); // end of jQuery name space
 
 
+// fecha
+
+d = new Date();
+document.querySelector("#year").innerHTML = d.getFullYear();
+
  ///////////*Información*/
 
  var info1 = 'https://docs.google.com/spreadsheets/d/16ybk3RTxFyyLkfnBTOD4rX5RufgcdGYJu2NkRf3b4io/edit#gid=0';
