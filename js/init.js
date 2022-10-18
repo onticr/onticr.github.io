@@ -34,13 +34,13 @@ document.querySelector("#year").innerHTML = d.getFullYear();
 
  ///////////*Noticias Enlaces*/
 
- var info3 = 'https://docs.google.com/spreadsheets/d/1vAlfxgaRfsSNaZTkqyuWgPWOR4CXAuJQl4gvmjbLogs/edit#gid=1783463520';
- /////////Template de Handlebars
+ /*var info3 = 'https://docs.google.com/spreadsheets/d/1vAlfxgaRfsSNaZTkqyuWgPWOR4CXAuJQl4gvmjbLogs/edit#gid=1783463520';
+ 
  var info3Temp = Handlebars.compile($('#info3Template').html());
  $('#info3').sheetrock({
    url: info3,
    rowTemplate: info3Temp
- });
+ }); */
 
  ////Página de Inicio//////
 
