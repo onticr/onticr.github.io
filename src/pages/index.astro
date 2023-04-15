@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+//import '../styles/tailwind.min.css';
+import '../styles/main.css';
+import '../styles/slideshow.css';
+import data from "../content/content.json"
+
+const imgs = data.inicio;
+console.log(imgs[0].image.url ) 
+
+let {title} = Astro.props; 
+---
+
+<MainLayout title="Cámara de Turismo Tenorio Miravalles">
+<div class="heroText"><h1> Bienvenido a Bijagua: Corazón del Corredor Biológico Tenorio Miravalles</h1>
+
+<div>
+<div class="black">Descubre este santuario de vida en el Norte de Costa Rica</div>
+<br>
+<button class="text-black verde btn1" ><a class="" href="/guide"><h2>Consulta nuestra guía <svg width="30px" height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M754.752 480H160a32 32 0 1 0 0 64h594.752L521.344 777.344a32 32 0 0 0 45.312 45.312l288-288a32 32 0 0 0 0-45.312l-288-288a32 32 0 1 0-45.312 45.312L754.752 480z"/></svg></h2></a></button></div>
+</div>
+<div class="container-slides">
+     
+      {imgs.map((img) =>  
+      <img loading="lazy" class="slide" src={img.image.url} alt={img.url}
+      >)}
+      </div>
+      
+</MainLayout>
+
+
+<script src="../components/auto-slideshow.js"></script>

@@ -1,0 +1,29 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import '../styles/main.css';
+import '../styles/cards.css';
+import data from "../content/content.json"
+
+const categorias = data.guide;
+//console.log(categorias)
+
+
+
+
+
+let {title} = Astro.props;
+---
+
+<MainLayout title="Guía Turistica - ONTI">
+
+
+<div class="cardContainer">
+{categorias.map((cat) => 
+  <figure class="card" background={cat.color}><img src={cat.icon}> <a href={`/guide/${cat.id}`}><h3>
+ {cat.title}
+  </h3></a>
+
+  </figure>
+)}
+  </div>
+</MainLayout>

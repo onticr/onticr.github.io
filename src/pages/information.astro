@@ -1,0 +1,84 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import "../styles/fancybox.css"
+import '../styles/main.css';
+import sheetrock from 'sheetrock'
+
+const response = await fetch('https://api.steinhq.com/v1/storages/641132d4d27cdd09f0e8dbb6/parrafos');
+const data = await response.json();
+
+
+
+
+var myCallback = function (error, options, response) {
+ console.log(error)
+  if (!error) {
+    console.log(response.data)
+  }
+};
+
+sheetrock({
+  url: "https://docs.google.com/spreadsheets/d/1qT1LyvoAcb0HTsi2rHBltBVpUBumAUzT__rhMvrz5Rk/edit#gid=0",
+  query: "select *",
+  callback: myCallback 
+});
+
+
+
+---
+
+<MainLayout title="Information - Cattemi">
+<div class="after-header-space"></div>
+<div class="container center-content">
+<h1 class="center-self" class="title">Información</h1>
+<div class="aboutText">
+  
+  {data.map((dato) => 
+  <div><h3>{dato.titulo}</h3></div>
+  <div><p set:html={dato.parrafo1}></p>
+  <a href={dato.imgURL1} data-fancybox="">
+  <img class="imgInfo"  onerror="this.style.display='none'"  loading="lazy" src={dato.imgURL1}></a>
+  <p set:html={dato.parrafo2}></p>
+  <a href={dato.imgURL2} data-fancybox="">
+  <img  class="imgInfo" onerror="this.style.display='none'"  loading="lazy" src={dato.imgURL2}></a>
+  <p set:html={dato.parrafo3}></p>
+  <a href={dato.imgURL3} data-fancybox="">
+  <img class="imgInfo"  onerror="this.style.display='none'"  loading="lazy" src={dato.imgURL3}></a>
+  <p set:html={dato.parrafo4}></p>
+    <p set:html={dato.parrafo5}></p>
+  
+  </div>
+  
+)}
+</div>
+
+<div id="test"></div>
+
+  
+  <!--input id="" type="radio" name="tabs" checked> 
+<label for=""></label--> 
+  
+  
+</MainLayout>
+
+
+<script defer is:inline>
+var imgs = document.querySelectorAll('.imgInfo')
+console.log(imgs) 
+
+imgs.map((img) =>{
+console.log(img)
+let src = img.getAttribute('src');
+
+ if (src === null || src === '') {
+  img.style.display='none';
+ }})
+
+
+
+
+</script>
+
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../components/fancybox.js" ></script>

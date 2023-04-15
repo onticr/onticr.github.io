@@ -1,0 +1,6 @@
+# HSTS 1.0 Known Hosts database for GNU Wget.
+# Edit at your own risk.
+# <hostname>[:<port>]	<incl. subdomains>	<created>	<max-age>
+www.svgrepo.com	0	0	1679207402	63072000
+cdnjs.cloudflare.com	0	0	1679022268	15780000
+cdn.jsdelivr.net	0	1	1642607535	31536000

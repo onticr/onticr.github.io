@@ -1,0 +1,93 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro"
+import "../../../styles/fancybox.css"
+import '../../../styles/tailwind.min.css'
+import '../../../styles/main.css';
+
+
+
+
+
+
+
+export async function getStaticPaths() {
+
+const response = await fetch('https://api.steinhq.com/v1/storages/64113304eced9b09e9c417c9/comida');
+const data = await response.json();
+
+
+
+return data.map(({ id,nombre,	socioCattemi,	descripcion,	ubicacion,	telefono,	email,	website,	servicios,	servExpress,	idiomas,	horario,	imgURL,	imgURL2,	gmaps}) => {
+
+return {
+params: { id },
+props: {nombre,	socioCattemi,	descripcion,	ubicacion,	telefono,	email,	website,	servicios,	servExpress,	idiomas,	horario,	imgURL,	imgURL2,	gmaps },
+};
+});
+}
+
+const { id } = Astro.params;
+const {nombre,	socioCattemi,	descripcion,	ubicacion,	telefono,	email,	website,	servicios,	servExpress,	idiomas,	horario,	imgURL,	imgURL2,	gmaps } = Astro.props;
+
+
+---
+
+<MainLayout>
+  <div class="after-header-space"></div>
+
+
+  <div class="center-content">
+<h1 translate="no" class="text-2xl center-content p-4">{nombre}</h1>
+    <main>
+      <a href={imgURL} data-fancybox="gallery"><img loading="lazy" class="lazyload activator" src={imgURL} onerror="this.style.display='none';this.parentNode.style.display='none';"></a>
+      <a href={imgURL2} data-fancybox="gallery"><img loading="lazy" class="lazyload activator" src={imgURL2} onerror="this.style.display='none';this.parentNode.style.display='none';"></a>
+      
+    </main>
+
+
+    <div class="center-content max-w-md mx-auto overflow-hidden md:max-w-2xl">
+      
+      <p class="p-4">{descripcion}</p>
+      <div class="p-4 ">
+      <strong>Servicios: </strong>
+        <p class=" infoDetalle"> {servicios}</p> <br>
+        <strong>Servicio Express: </strong>
+       
+        <p class=" infoDetalle"> {servExpress}</p>
+      </div>
+      <div class="p-4">
+        <p class=" infoDetalle"><strong>Horario: </strong>{horario}</p>
+        <p class=" infoDetalle"><strong>Idiomas: </strong>{idiomas}</p>
+      </div>
+
+      <div class="p-4 ">
+
+        <strong>Ubicación:</strong><p class="">{ubicacion}</p><br>
+        <div><strong>Google Maps: </strong><a class="" href={gmaps} target="_blank"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.8159 20.6077C16.8509 18.5502 20 15.1429 20 11C20 6.58172 16.4183 3 12 3C7.58172 3 4 6.58172 4 11C4 15.1429 7.14909 18.5502 11.1841 20.6077C11.6968 20.8691 12.3032 20.8691 12.8159 20.6077Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 11C15 12.6569 13.6569 14 12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></div> <br>
+        <div><strong>Teléfono: </strong><a class="p-4" href={telefono}><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" />
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.14089 4.4021C2.34025 2.92963 3.63956 2 4.99004 2H7.55848C8.84977 2 9.99619 2.82629 10.4045 4.05132L11.454 7.19963C11.905 8.55283 11.1086 10.0036 9.72482 10.3496C9.38646 10.4342 9.26975 10.8555 9.51637 11.1022L12.8978 14.4836C13.1445 14.7303 13.5658 14.6135 13.6504 14.2752C13.9964 12.8914 15.4472 12.095 16.8004 12.546L19.9487 13.5955C21.1737 14.0038 22 15.1502 22 16.4415V19.01C22 20.3604 21.0704 21.6598 19.5979 21.8591C18.9114 21.9521 18.211 22 17.5 22C8.93959 22 2 15.0604 2 6.5C2 5.78898 2.04794 5.08863 2.14089 4.4021Z" fill="black"/>
+</svg></a></div>
+        <div><strong>Correo: </strong><a class="p-4" href={email}><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="3" y="5" width="18" height="14" rx="2" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+</svg></a></div>
+         <div><strong>Website: </strong><a class="p-4" href={website} target="_blank"><svg fill="#000000" width="30px" height="30px" viewBox="0 0 512 512" id="_x30_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M418.275,146h-46.667  c-5.365-22.513-12.324-43.213-20.587-61.514c15.786,8.776,30.449,19.797,43.572,32.921C403.463,126.277,411.367,135.854,418.275,146  z M452,256c0,17.108-2.191,33.877-6.414,50h-64.034c1.601-16.172,2.448-32.887,2.448-50s-0.847-33.828-2.448-50h64.034  C449.809,222.123,452,238.892,452,256z M256,452c-5.2,0-21.048-10.221-36.844-41.813c-6.543-13.087-12.158-27.994-16.752-44.187  h107.191c-4.594,16.192-10.208,31.1-16.752,44.187C277.048,441.779,261.2,452,256,452z M190.813,306  c-1.847-16.247-2.813-33.029-2.813-50s0.966-33.753,2.813-50h130.374c1.847,16.247,2.813,33.029,2.813,50s-0.966,33.753-2.813,50  H190.813z M60,256c0-17.108,2.191-33.877,6.414-50h64.034c-1.601,16.172-2.448,32.887-2.448,50s0.847,33.828,2.448,50H66.414  C62.191,289.877,60,273.108,60,256z M256,60c5.2,0,21.048,10.221,36.844,41.813c6.543,13.087,12.158,27.994,16.752,44.187H202.404  c4.594-16.192,10.208-31.1,16.752-44.187C234.952,70.221,250.8,60,256,60z M160.979,84.486c-8.264,18.301-15.222,39-20.587,61.514  H93.725c6.909-10.146,14.812-19.723,23.682-28.593C130.531,104.283,145.193,93.262,160.979,84.486z M93.725,366h46.667  c5.365,22.513,12.324,43.213,20.587,61.514c-15.786-8.776-30.449-19.797-43.572-32.921C108.537,385.723,100.633,376.146,93.725,366z   M351.021,427.514c8.264-18.301,15.222-39,20.587-61.514h46.667c-6.909,10.146-14.812,19.723-23.682,28.593  C381.469,407.717,366.807,418.738,351.021,427.514z"/></svg></a>
+
+
+     
+
+
+
+
+
+    </div>
+  </div>
+
+</MainLayout>
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../../../components/fancybox.js"></script>

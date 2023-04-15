@@ -1,0 +1,175 @@
+{
+  "inicio": [
+    {
+      "image": {
+        "url": "https://onticr.github.io/img/catarata.jpg",
+        "id": ""
+      }
+    },
+    {
+      "image": {
+        "url": "https://onticr.github.io/img/rioceleste.jpg",
+        "id": ""
+      }
+    },
+    {
+      "image": {
+        "url": "https://onticr.github.io/img/rioceleste4.jpg",
+        "id": ""
+      }
+    },
+    {
+      "image": {
+        "url": "https://onticr.github.io/img/bijagua2.jpg",
+        "id": ""
+      }
+    }
+  ],
+  "guide":[{
+     "title":"¿Dónde Dormir?","id":"stays",
+    "color":"#470688",
+    "icon":"https://onticr.github.io/img/hospedaje.png",
+     "ofertas":[{
+   }]},{
+     "title":"¿Dónde Comer?","id":"food",
+     "color":"#e74c3c",
+     "icon":"https://onticr.github.io/img/comida.png",
+     "ofertas":[{
+       
+     }]
+   },{
+     "title":"¿Qué Hacer?","id":"activities",
+     "color":"#e74c3c",
+     "icon":"https://onticr.github.io/img/actividades.png",
+     "ofertas":[{
+       
+     }]}
+   ,{
+     "title":"Cultura, Arte y Souvenirs","id":"culture",
+     "color":"#470688",
+     "icon":"https://onticr.github.io/img/info.png",
+     "ofertas":[{
+       
+     }]
+   },{
+     "title":"Tiendas y Servicios","id":"services",
+     "color":"#470688",
+     "icon":"https://onticr.github.io/img/servicios.png",
+     "ofertas":[{
+       
+     }]
+
+    
+  }],
+  "gallery":[
+     {
+      "image": {
+        "url": "https://66.media.tumblr.com/c2e743ec3202d185d510eeed30eb83de/839a0e023f3768a0-10/s500x750/cb1f938908eb111e2b04d088da430ba5b98fb1c0.jpg",
+        "id": ""
+      }
+    },
+    
+    {
+      "image": {
+        "url": "https://66.media.tumblr.com/2567ddd871f0895e31742228a408926e/430fd0085abcb1aa-5e/s500x750/b309ef14f5f8ad5b4376779b6fa0a62223edfa2c.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/91693366d77addae58a958d323e60328/19cc070ffb98f33a-bc/s500x750/ff1d5d888e28c48a832dffb44dd7808abf1a373b.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/bd412daed55a0eb7aeac6f652837075b/19cc070ffb98f33a-a1/s500x750/6db9d90340e86a7a4b695ba785d28f056f9ed4b0.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/b51807f5fc43e3e1a456859c2c44195e/38f757255762bfc0-c0/s1280x1920/fe970494e271ffa69e61f7b1417f9083051f09d4.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/c54f6c5ddce8758b9beb7bcc2ad69239/86a7638f3d55b5fa-be/s500x750/4d159effed1b20a5cfba737c480b678077f8af90.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/72170710b31ce984665be9e5486eb1e5/c8d4a6fbe7725ccc-f1/s500x750/6a399863e8e75c1cdebac26a233236fd4a11a644.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/686afa7d1278dae2c0fe14a6f68efdb4/c36866039a699cb4-38/s500x750/2d749b3e1ec8c648dc1ff4bb915ad8f77df577eb.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/f47393d8822ac2db477f50f29abfaa72/64d232fa4702d15a-11/s500x750/dde7fd51f14a44b407d4c3ffa81cebcd90db2a59.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/f47393d8822ac2db477f50f29abfaa72/64d232fa4702d15a-11/s500x750/dde7fd51f14a44b407d4c3ffa81cebcd90db2a59.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/8913cb4517c3dfe347891253099b3465/0207c95ac1bfc287-93/s1280x1920/17843300465537145aa1a660c9d771e4dd374dc6.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/6f47066a69c874705a32a899e2ab91d7/0b7178d068cf8a74-f4/s500x750/286dec60059f6a2a76f4f5405be794e547362a44.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://66.media.tumblr.com/6e480df6818b530a0be392869b4ed32a/a082d565e13f7662-73/s500x750/c4f2303bee4dfffe7741368177fc1ff35a83dead.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://onticr.github.io/img/img.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://onticr.github.io/img/img1.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://onticr.github.io/img/img2.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://onticr.github.io/img/img3.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://onticr.github.io/img/img8.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://onticr.github.io/img/img5.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://onticr.github.io/img/img6.jpg",
+        "id": ""
+      }
+    },{
+      "image": {
+        "url": "https://onticr.github.io/img/img7.jpg",
+        "id": ""
+      }
+    }
+    
+  ]
+}

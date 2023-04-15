@@ -1,0 +1,106 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.card {
+
+  color: #ffffff;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  cursor:pointer;
+   min-width:400px;
+  min-height:400px;
+  display: grid;
+align-content: center;
+margin: auto;
+text-align: center;
+}
+
+/*
+
+.card *,
+.card *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}*/
+
+.card img {
+  backface-visibility: hidden;
+  vertical-align: top;
+padding:5px;
+  margin:auto;
+}
+
+.card:nth-child(2n+1) {
+	background: black;
+}
+
+
+
+
+.card figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  bottom: 0;
+  padding: 25px 40% 25px 20px;
+}
+
+.card h3,
+.card .content {
+  margin: 0;
+ 
+  letter-spacing: 1px;
+}
+
+.card h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.card h3:hover {
+  color:black;
+}
+
+.card:nth-child(2n+1) h3:hover {
+	color: #00838f;
+}
+
+.card .content {
+  font-size: 0.9em;
+}
+
+.card:hover h3,
+.card:hover .content {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 0.9;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.card:hover:after {
+  -webkit-transform: translateX(-0%);
+  transform: translateX(-0%);
+  opacity: 0.9;
+}
+
+.btn-complete {
+padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}

@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import "../styles/fancybox.css"
+import '../styles/main.css';
+
+
+import data from "../content/content.json"
+
+const imgs = data.gallery;
+console.log(imgs[0].url ) 
+
+let {title} = Astro.props; 
+---
+
+<MainLayout title="Cámara de Turismo Tenorio Miravalles">
+
+
+<main>
+     
+      {imgs.map((img) =>  
+        <a href={img.image.url} data-fancybox="gallery">
+      <img loading="lazy" class="" src={img.image.url} alt={img.url}
+      ></a>)}
+      <main>
+      
+      
+</MainLayout>
+
+
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../components/fancybox.js" ></script>

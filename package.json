@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "astro": "^2.1.2",
+    "astro-netlify-cms": "^0.5.3",
+    "sheetrock": "^1.2.0",
+    "font-awesome": "^4.7.0",
+    "exceljs": "^4.3.0",
+    "fs": "^0.0.2",
+    "path": "^0.12.7",
+    "https": "^1.0.0",
+    "got": "^12.6.0"
+  },
+  "scripts": {
+    "start": "astro dev",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "glitch": {
+    "projectType": "generated_static"
+  }
+}
