@@ -2,14 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import "../styles/fancybox.css"
 import '../styles/main.css';
-import sheetrock from 'sheetrock'
+/*import sheetrock from 'sheetrock'*/
 
 const response = await fetch('https://api.steinhq.com/v1/storages/641132d4d27cdd09f0e8dbb6/parrafos');
 const data = await response.json();
 
 
 
-
+/*
 var myCallback = function (error, options, response) {
  console.log(error)
   if (!error) {
@@ -22,7 +22,7 @@ sheetrock({
   query: "select *",
   callback: myCallback 
 });
-
+*/
 
 
 ---
